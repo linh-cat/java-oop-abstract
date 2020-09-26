@@ -39,7 +39,7 @@ public class StaffFullTime extends Staff {
         super.InputStaff();
         System.out.println("Nhap so gio lam them: ");
         numberWorkDay = input.nextInt();
-        System.out.println("Nhap chuc vu cua nhan vien: ");
+        System.out.println("Nhap chuc vu cua nhan vien(1 - binh thuong, 2 - sep): ");
         choose = input.nextInt();
 
         switch (choose) {

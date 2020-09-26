@@ -37,21 +37,23 @@ public class StaffFullTime extends Staff {
     public void InputStaff() {
         // TODO Auto-generated method stub
         super.InputStaff();
-        System.out.println("Nhap so gio lam them: ");
-        numberWorkDay = input.nextInt();
-        System.out.println("Nhap chuc vu cua nhan vien(1 - binh thuong, 2 - sep): ");
+
+        System.out.println("Chức vụ(1 - bình thường, 2 - sếp): ");
         choose = input.nextInt();
+
+        System.out.println("Nhập số giờ làm thêm: ");
+        numberWorkDay = input.nextInt();
 
         switch (choose) {
             case 1:
-                typeStaff = "Nhan Vien Binh Thuong!";
+                typeStaff = "Nhân viên bình thường!";
                 break;
             case 2:
-                typeStaff = "Nhan Vien Cap Ca!";
+                typeStaff = "Nhân viên sếps!";
                 break;
 
             default:
-                System.out.println("Nhap Sai Loai Nhan Vien @@");
+                System.out.println("Nhập sai chức vụ nhân viên @@");
                 break;
         }
     }
@@ -59,9 +61,9 @@ public class StaffFullTime extends Staff {
     @Override
     public void CalculaSalary() {
         // TODO Auto-generated method stub
-        if (typeStaff.equals("Nhan Vien Binh Thuong!")) {
+        if (typeStaff.equals("Nhân viên bình thường!")) {
             employeeSalary = salaryNormal + numberWorkDay * salaryAddTime;
-        } else if (typeStaff.equals("Nhan Vien Cap Ca!")) {
+        } else if (typeStaff.equals("Nhân viên sếps!")) {
             employeeSalary = salarySir + numberWorkDay * salaryAddTime;
         }
     }
@@ -69,7 +71,7 @@ public class StaffFullTime extends Staff {
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return super.toString() + ", Loai Nhan Vien: " + this.typeStaff + "So Gio Lam Viec: " + this.numberWorkDay;
+        return super.toString() + ", Loại Nhân Viên: " + this.typeStaff + " Số ngày làm việc: " + this.numberWorkDay;
     }
 
 }

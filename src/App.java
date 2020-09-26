@@ -14,26 +14,26 @@ public class App {
         Staff staff;
 
         ArrayList<Staff> ArrayList = new ArrayList<Staff>();
-        System.out.println("Nhap so luong nhan vien toan thoi gian: ");
+        System.out.println("Nhập số  lượng nhân viên toàn thời gian: ");
         quantityStaffFullTime = scanner.nextInt();
-        System.out.println("== Nhap thong tin nhan vien toan thoi gian ==");
+        System.out.println("== Nhập thông tin nhân viên toàn thời gian ==");
         for (int i = 0; i < quantityStaffFullTime; i++) {
-            System.out.println("Nhap thong tin nhan vien thu " + (i + 1));
+            System.out.println("Nhân viên thứ " + (i + 1));
             staff = new StaffFullTime();
             staff.InputStaff();
             ArrayList.add(staff);
         }
-        System.out.println("Nhap so luong nhan vien thoi vu: ");
+        System.out.println("Nhập số lượng nhân viên thời vụ: ");
         quantityStaffPartTime = scanner.nextInt();
-        System.out.println("== Nhap thong tin nhan vien thoi vu ==");
+        System.out.println("== Nhập thông tin nhân viên thời vụ ==");
 
         for (int i = 0; i < quantityStaffPartTime; i++) {
-            System.out.println("Nhap thong tin nhan vien thu " + (i + 1));
+            System.out.println("Nhân viên thứ: " + (i + 1));
             staff = new StaffPartTime();
             staff.InputStaff();
             ArrayList.add(staff);
         }
-        System.out.println("Thong Tin Ve Luong");
+        System.out.println("== Tất cả thông tin thu thập được ==");
         for (Staff staffValue : ArrayList) {
             staffValue.CalculaSalary();
             System.out.println(staffValue.toString());

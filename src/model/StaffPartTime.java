@@ -20,7 +20,7 @@ public class StaffPartTime extends Staff {
     public void InputStaff() {
         // TODO Auto-generated method stub
         super.InputStaff();
-        System.out.println("Nhap So Gio Lam Viec: ");
+        System.out.println("Nhập số giờ làm việc: ");
         timeWork = input.nextInt();
 
     }
@@ -34,6 +34,6 @@ public class StaffPartTime extends Staff {
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return super.toString() + ", Gio Lam Viec: " + this.timeWork;
+        return super.toString() + ", Giờ làm việc: " + this.timeWork;
     }
 }

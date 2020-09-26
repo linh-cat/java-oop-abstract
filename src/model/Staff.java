@@ -22,7 +22,7 @@ public abstract class Staff {
     }
 
     public void InputStaff() {
-        System.out.println("Nhap vao nhan vien: ");
+        System.out.println("Nhập vào tên nhân viên: ");
         nameStaff = scanner.nextLine();
     }
 
@@ -30,6 +30,6 @@ public abstract class Staff {
 
     @Override
     public String toString() {
-        return "Name: " + this.getName() + ", Salary: " + this.getEmloyeeSalaary() + "VND.";
+        return "Tên: " + this.getName() + ", Lương: " + this.getEmloyeeSalaary() + "VND.";
     }
 }
